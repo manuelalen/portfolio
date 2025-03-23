@@ -1,0 +1,32 @@
+---
+// Layout.astro
+import Header from '../components/Header.astro';
+import "../styles/global.css";
+import '@fontsource-variable/onest';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body class="flex flex-col items-center min-h-screen">
+    <Header />
+    <main class="w-full">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+    color: white;
+  }
+
+  html {
+    background: #050505;
+    font-family: "Onest Variable", system-ui, sans-serif;
+  }
+</style>

@@ -1,0 +1,130 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Github from '../components/icons/Github.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Experience from '../components/Experience.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Portfolio de Manuel Alén" description="Contrata a Manuel Alén como Data Analyst-Data Engineer" >
+<main>
+
+	<section class="w-full lg:w-[900px] mx-auto py-44 flex flex-col md:flex-row items-center gap-8">
+		<!-- Imagen -->
+		<img 
+		  class="rounded-full w-32 h-32 object-cover"
+		  src="https://pbs.twimg.com/profile_images/1810925224830873600/PdMRFCiT_400x400.jpg" 
+		  alt="Foto de Manuel" 
+		/>
+	  
+		<!-- Texto -->
+		<div class="text-center md:text-left">
+		  <h1 class="text-white text-5xl font-bold leading-tight">
+			¡Hola, Qué tal!<br />
+			Soy <span class="text-white">Manuel</span>
+		  </h1>
+	  
+		  <div class="flex justify-center md:justify-start mt-4">
+			<a href="https://www.linkedin.com/in/manuel-a-90a4548b/">
+			<Badge>Abierto a contrataciones</Badge></a>
+		  </div>
+	  
+		  <h2 class="text-white mt-6 max-w-xl">
+			<span class="text-yellow-200/90">Data Analyst | Data Engineer </span> con experiencia en <span class="text-red-300">R, PBI, múltiples bases de datos y Python.</span><br />
+			Trabajando de forma híbrida. <span class="text-green-300">Andalucía, España</span> 🌍<br />
+			Responsable de la creación de dashboards, gestión de RLS, usuarios y análisis de datos para la toma de decisiones.
+		  </h2>
+<!-- Redes sociales -->
+<div class="flex gap-6 mt-6 justify-center md:justify-start">
+	<a
+	  href="https://github.com/manuelalen?tab=repositories"
+	  target="_blank"
+	  class="flex items-center gap-2 text-white"
+	>
+	  <Github />
+	  <span>GitHub</span>
+	</a>
+  
+	<a
+	  href="https://www.linkedin.com/in/manuel-a-90a4548b/"
+	  target="_blank"
+	  class="flex items-center gap-2 text-white"
+	>
+	  <Linkedin />
+	  <span>LinkedIn</span>
+	</a>
+  </div>
+		</div>
+
+
+	  </section>
+
+<!-- Título Experiencia -->
+<h1 id = "about"class="text-white text-4xl font-bold text-center mt-20 mb-8">⚒️ Experiencia</h1>
+
+<section class="flex justify-center">
+  <Experience />
+</section>
+<!-- Título Proyectos -->
+<h1 id="projects" class="text-white text-4xl font-bold text-center mt-20 mb-8">📁 Proyectos</h1>
+
+<section class="w-full lg:w-[900px] mx-auto space-y-8">
+  <!-- ProjectCards aquí -->
+</section>
+	<section class="w-full lg:w-[900px] mx-auto mt-20 space-y-8">
+		<ProjectCard 
+		  title="DATA3 - Tienda as a Data Service"
+		  image="https://w0.peakpx.com/wallpaper/926/826/HD-wallpaper-oxxo-animado-atardecer-colopastel-color-dibujo-draw-meme-pastel-tienda.jpg"
+		  tech={["🐍 Python", "🐋 Docker","⭐ Spark","📊 PBI"]}
+		  description="Entorno de simulación de una tienda con el registro de clientes, registro de compras, API para análisis de datos, base de datos MySQL, uso de Spark y Delta Table para carga en PBI. Uso de GitHub Actions como CI/CD"
+		  links={[
+			{ label: "Código", href: "https://github.com/manuelalen/api_tienda/tree/main" }
+		  ]}
+		/>
+		
+		<ProjectCard 
+		  title="Clockify Analyzer - Manejo de los registros de tiempo de trabajo de los empleados"
+		  image="https://www.softwaredoit.es/logotipos/clockify.jpg?t=0000-00-00_00_00_00"
+		  tech={["🐍 Python", "📊 PBI"]}
+		  description="Inserts de los datos de Clockify de los empleados para su análisis en PBI"
+		  links={[
+			{ label: "Código", href: "https://github.com/manuelalen/clockify_analyzer" }
+		  ]}
+		/>
+	  
+		<ProjectCard 
+		  title="INE Extractor - Extracción de los datos de la API del INE"
+		  image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Instituto_Nacionalde_Estad%C3%ADstica_%28Spain%29_logo.svg/1200px-Instituto_Nacionalde_Estad%C3%ADstica_%28Spain%29_logo.svg.png"
+		  tech={["🐍 Python", "🪣 MySQL","📊 PBI"]}
+		  description="Programa en Python para la extracción de los datos de la API del INE y su carga en una base de datos MySQL para su análisis en PBI"
+		  links={[
+			{ label: "Código", href: "https://github.com/manuelalen/INE_extractor" }
+		  ]}
+		/>
+	  </section>
+
+
+<!-- Título Contacto -->
+<h1 id="contact" class="text-white text-4xl font-bold text-center mt-20 mb-8">📲 Contacto</h1>
+
+
+<h2 class="text-2xl font-bold text-center mt-20 mb-8">
+	Soy <span class="text-yellow-500">Manuel Alén</span>, un apasionado <span class="text-yellow-500">Data Analyst-Data Engineer</span> con experiencia en la extracción, transformación y carga de datos, así como en la creación de dashboards en <span class="text-yellow-500">Power BI</span>. Si estás buscando un profesional para tu próximo proyecto y al ver mi perfil te interesa, no dudes en <span class="text-yellow-500">contactarme por Linkedin</span>.
+
+	<br><br> Los proyectos aquí mostrados van más enfocados con el apartado <span class="text-yellow-500">Data Engineer</span> y toda la preparación de los datos para su posterior análisis, pero también tengo experiencia en el apartado de <span class="text-yellow-500">Data Analyst</span> mediante la confección de Dashboards en <span class="text-yellow-500">Power BI</span> para cliente.
+
+</h2>
+
+
+  <footer class="text-center text-sm text-gray-500 mt-20 mb-6">
+	© 2024 Manuel Alén. Licencia GNU sobre esta web y todos mis proyectos.
+  </footer>
+</main>
+
+</Layout>
